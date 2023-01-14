@@ -15,7 +15,7 @@ header {
     padding-top: 50px;
 }
 
-.btn-primary {
+.btn-primary, .ad-btn {
     background: #FF900E;
     border-radius: 8px;
     border: none;
@@ -35,7 +35,8 @@ ul,
 }
 
 .logo,
-.banner-title {
+.banner-title,
+.ad-title {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
@@ -79,6 +80,10 @@ nav li a {
 }
 
 /* Features-part-design */
+.features-container {
+    margin-bottom: 130px;
+}
+
 .features-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -94,17 +99,53 @@ nav li a {
     font-size: 45px;
     color: #131313;
 }
-.features-details h2>span{
-    color:#727272;
+
+.features-details h2>span {
+    color: #727272;
 }
-.features-details h2>p{
-    color:#FF900E;
+
+.features-details h2>p {
+    color: #FF900E;
 }
-.features-description{
+
+.features-description,
+.ad-description, .item-description {
     color: #727272;
     font-size: 16px;
     font-weight: 400;
-    padding:32px 0px;
+    padding: 32px 0px;
+}
+
+/* Advertisement part design */
+#ad-container{
+    position:relative;
+}
+.advertisement-container {
+    display: flex;
+    gap: 58px;
+}
+
+.ad-title {
+    border-left: 6px solid #FF900E;
+    padding: 0px 21px;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #131313;
+    padding:60px 0px 10px 0px;
+}
+.ad-btn{
+    position: absolute;
+    left: 50%;
+    right:50%;
+    bottom:60px;
+    width:10%;
+    text-align: center;  
+}
+.ad-btn p{
+    font-weight: 300;
 }
 
 
@@ -117,7 +158,7 @@ nav li a {
 @media only screen and (max-width:576px) {
 
     nav,
-    ul {
+    ul, .advertisement-container {
         flex-direction: column;
     }
 
@@ -125,14 +166,27 @@ nav li a {
         text-decoration: underline;
     }
 
-    .banner-description, .features-details {
+    .banner-description,
+    .features-details {
         width: 100%;
         text-align: center;
     }
-    .features-container{
+
+    .features-container {
         flex-direction: column-reverse;
     }
-    .features-gallery{
-        grid-template-columns: repeat(1,1fr);
+
+    .features-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .advertisement-model img{
+        width:100%;
+    }
+    .ad-btn{
+        width:40%;
+        position:absolute;
+        bottom: 0px;
+        left: 20%;
+        right:50%;
     }
 }

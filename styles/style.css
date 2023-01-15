@@ -15,7 +15,8 @@ header {
     padding-top: 50px;
 }
 
-.btn-primary, .ad-btn {
+.btn-primary,
+.ad-btn {
     background: #FF900E;
     border-radius: 8px;
     border: none;
@@ -27,7 +28,8 @@ header {
 
 nav,
 ul,
-.features-container {
+.features-container,
+.achievement-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +38,8 @@ ul,
 
 .logo,
 .banner-title,
-.ad-title {
+.ad-title,
+.facts-title {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
@@ -66,7 +69,8 @@ nav li a {
     margin: 16px 0px;
 }
 
-.banner-description p {
+.banner-description p,
+.facts-description {
     font-weight: 400;
     font-size: 16px;
     color: #727272;
@@ -109,7 +113,8 @@ nav li a {
 }
 
 .features-description,
-.ad-description, .item-description {
+.ad-description,
+.item-description {
     color: #727272;
     font-size: 16px;
     font-weight: 400;
@@ -117,12 +122,14 @@ nav li a {
 }
 
 /* Advertisement part design */
-#ad-container{
-    position:relative;
+#ad-container {
+    position: relative;
 }
+
 .advertisement-container {
     display: flex;
     gap: 58px;
+    padding-left: 100px;
 }
 
 .ad-title {
@@ -134,22 +141,62 @@ nav li a {
     font-weight: 600;
     font-size: 20px;
     color: #131313;
-    padding:60px 0px 10px 0px;
+    padding-top: 45px;
 }
-.ad-btn{
+
+.ad-btn {
     position: absolute;
     left: 50%;
-    right:50%;
-    bottom:60px;
-    width:10%;
-    text-align: center;  
+    right: 50%;
+    bottom: 60px;
+    width: 10%;
+    text-align: center;
 }
-.ad-btn p{
+
+.ad-btn p {
     font-weight: 300;
 }
 
+.achievement {
+    width: 90%;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    text-align: center;
+    /* transition: (background-color 2s)(color 2s); */
+    /* transition-property: background-color,color;  */
+    transition: background-color 1s ease-out, color 2s ease-out,border ease-out,width 2s;
+}
+
+.achievement:hover {
+    background-color: aqua;
+    width:100%;
+    border:none;
+    transform: translateZ(100%);
+}
+
+.achievement img {
+    padding-top: 45px;
+}
+
+.achievement h2 {
+    font-weight: 600;
+    font-size: 45px;
+    color: #424242;
+}
+.achievement:hover.achievement h2{
+    color:white;
+}
+.achievement:hover.achievement p{
+    color:blue;
+}
 
 
+.achievement p {
+    font-weight: 600;
+    font-size: 20px;
+    color: #727272;
+    padding-bottom: 60px;
+}
 
 
 
@@ -158,7 +205,8 @@ nav li a {
 @media only screen and (max-width:576px) {
 
     nav,
-    ul, .advertisement-container {
+    ul,
+    .advertisement-container, .achievement-container {
         flex-direction: column;
     }
 
@@ -179,14 +227,20 @@ nav li a {
     .features-gallery {
         grid-template-columns: repeat(1, 1fr);
     }
-    .advertisement-model img{
-        width:100%;
+
+    .advertisement-container {
+        padding-left: 0px;
     }
-    .ad-btn{
-        width:40%;
-        position:absolute;
+
+    .advertisement-model img {
+        width: 100%;
+    }
+
+    .ad-btn {
+        width: 40%;
+        position: absolute;
         bottom: 0px;
         left: 20%;
-        right:50%;
+        right: 50%;
     }
 }

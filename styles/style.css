@@ -29,7 +29,9 @@ header {
 nav,
 ul,
 .features-container,
-.achievement-container, .sponsor-claint {
+.achievement-container,
+.sponsor-claint,
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +100,8 @@ nav li a {
     width: 40%;
 }
 
-.features-details h2, .sponsor-title {
+.features-details h2,
+.sponsor-title {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
@@ -114,7 +117,8 @@ nav li a {
 
 .features-description,
 .ad-description,
-.item-description, .sponsor-container>p {
+.item-description,
+.sponsor-container>p {
     color: #727272;
     font-size: 16px;
     font-weight: 400;
@@ -129,7 +133,7 @@ nav li a {
 .advertisement-container {
     display: flex;
     gap: 58px;
-    padding-left: 100px;
+    padding-left: 20px;
 }
 
 .ad-title {
@@ -162,15 +166,13 @@ nav li a {
     border: 1px solid #FF900E;
     border-radius: 8px;
     text-align: center;
-    /* transition: (background-color 2s)(color 2s); */
-    /* transition-property: background-color,color;  */
-    transition: background-color 1s ease-out, color 2s ease-out,border ease-out,width 2s;
+    transition: background-color 1s ease-out, color 2s ease-out, border ease-out, width 2s;
 }
 
 .achievement:hover {
     background-color: aqua;
-    width:100%;
-    border:none;
+    width: 100%;
+    border: none;
     transform: translateZ(100%);
 }
 
@@ -183,13 +185,14 @@ nav li a {
     font-size: 45px;
     color: #424242;
 }
-.achievement:hover.achievement h2{
-    color:white;
-}
-.achievement:hover.achievement p{
-    color:blue;
+
+.achievement:hover.achievement h2 {
+    color: white;
 }
 
+.achievement:hover.achievement p {
+    color: blue;
+}
 
 .achievement p {
     font-weight: 600;
@@ -197,26 +200,86 @@ nav li a {
     color: #727272;
     padding-bottom: 60px;
 }
+
 /* Sponsor part design */
-.sponsor-container{
+.sponsor-container {
     text-align: center;
 }
-.sponsor-title{
-    margin-top:180px;
-}
-.sponsor-container p{
-    width:50%;
-    margin:0 auto;
+
+.sponsor-title {
+    margin-top: 180px;
 }
 
+.sponsor-container p {
+    width: 50%;
+    margin: 0 auto;
+}
 
+/* Footer design  */
+footer {
+    margin-top: 100px;
+    padding: 100px;
+    background: #1E1E1E;
+}
 
+.logging h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.logging h5:hover {
+    cursor: pointer;
+    color: rgb(6, 240, 240);
+}
+
+.logging input {
+    border: 1px solid rgb(6, 240, 240);
+    padding: 10px 50px 10px 5px;
+    margin: 10px 0px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+footer hr {
+    width: 1px;
+    height: 150px;
+    border: 0;
+    background: rgb(6, 240, 240);
+}
+.contact p {
+    padding: 10px 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.contact i {
+    color: aqua;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.contact p:hover {
+    color: aqua;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.copyright {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-align: center;
+    color: #424242;
+    font-weight: 400;
+    font-size:12px;
+}
 /* Responsive design (Mobile) */
 @media only screen and (max-width:576px) {
 
     nav,
     ul,
-    .advertisement-container, .achievement-container,.sponsor-claint {
+    .advertisement-container,
+    .achievement-container,
+    .sponsor-claint,
+    .footer-container {
         flex-direction: column;
     }
 
@@ -242,7 +305,8 @@ nav li a {
         padding-left: 0px;
     }
 
-    .advertisement-model img, .sponsor-container>p {
+    .advertisement-model img,
+    .sponsor-container>p {
         width: 100%;
     }
 
@@ -252,5 +316,15 @@ nav li a {
         bottom: 0px;
         left: 20%;
         right: 50%;
+    }
+
+    footer .logging {
+        text-align: center;
+    }
+
+    footer hr {
+        width: 90%;
+        height: 1px;
+        margin: 0 auto;
     }
 }

@@ -29,7 +29,7 @@ header {
 nav,
 ul,
 .features-container,
-.achievement-container {
+.achievement-container, .sponsor-claint {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +98,7 @@ nav li a {
     width: 40%;
 }
 
-.features-details h2 {
+.features-details h2, .sponsor-title {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
@@ -114,7 +114,7 @@ nav li a {
 
 .features-description,
 .ad-description,
-.item-description {
+.item-description, .sponsor-container>p {
     color: #727272;
     font-size: 16px;
     font-weight: 400;
@@ -197,7 +197,17 @@ nav li a {
     color: #727272;
     padding-bottom: 60px;
 }
-
+/* Sponsor part design */
+.sponsor-container{
+    text-align: center;
+}
+.sponsor-title{
+    margin-top:180px;
+}
+.sponsor-container p{
+    width:50%;
+    margin:0 auto;
+}
 
 
 
@@ -206,7 +216,7 @@ nav li a {
 
     nav,
     ul,
-    .advertisement-container, .achievement-container {
+    .advertisement-container, .achievement-container,.sponsor-claint {
         flex-direction: column;
     }
 
@@ -232,7 +242,7 @@ nav li a {
         padding-left: 0px;
     }
 
-    .advertisement-model img {
+    .advertisement-model img, .sponsor-container>p {
         width: 100%;
     }
 
